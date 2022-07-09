@@ -55,7 +55,6 @@ from telegram.ext import (
 from telegram.ext.dispatcher import DispatcherHandlerStop, run_async
 from telegram.utils.helpers import escape_markdown
 
-bot_name = f"{dispatcher.bot.first_name}"
 
 def get_readable_time(seconds: int) -> str:
     count = 0
@@ -83,7 +82,9 @@ def get_readable_time(seconds: int) -> str:
 
 
 PM_START_TEXT = f"""
-\nI am *{bot_name}* , a group management bot based on the anime *{ANIME_NAME}*![ ]({START_MEDIA})
+Hello {}! Nice to meet you! 
+
+I am *Naruto* , a group management bot based on the anime *Naruto*![ ](https://telegra.ph/file/9147c3096ddeaf00c2a00.jpg)
 
 *Click on the Commands Button below to go through my commands.*
 """
@@ -91,23 +92,23 @@ PM_START_TEXT = f"""
 buttons = [
     [
         InlineKeyboardButton(
-            text=f" Add {bot_name} to your Group", url=f"t.me/{BOT_USERNAME}?startgroup=true"),
+            text=f" Add Naruto to your Group", url=f"t.me/Naruto_Management_bot?startgroup=true"),
     ],
     [
         InlineKeyboardButton(text="❓Help", callback_data="Shikimori_"),
         InlineKeyboardButton(text=" 💬Commands", callback_data="help_back"),
     ],
     [
-        InlineKeyboardButton(text="🚨Support Grp", url=f"https://t.me/{SUPPORT_CHAT}"),
-        InlineKeyboardButton(text="❗Updates", url=f"https://t.me/{UPDATE_CHANNEL}"),
+        InlineKeyboardButton(text="🚨Support Grp", url=f"https://t.me/narutobot_0001"),
+        InlineKeyboardButton(text="❗Updates", url=f"https://t.me/Shayariki_mehfil"),
    
     ], 
 ]
 
 HELP_STRINGS = """
 Click on the button bellow to get description about specifics command."""
-
-ShikimoriSTART = START_MEDIA
+KURUMI_IMG ="https://telegra.ph/file/2b36641414e05cc297481.jpg"
+ShikimoriSTART ="https://telegra.ph/file/9147c3096ddeaf00c2a00.jpg"
 
 IMPORTED = {}
 MIGRATEABLE = []
@@ -208,11 +209,7 @@ def start(update: Update, context: CallbackContext):
         else:
             first_name = update.effective_user.first_name
             hmm = "Hello *{}*! Nice to meet you!".format(escape_markdown(first_name))
-            HMM = hmm + PM_START_TEXT
-
-            update.effective_message.reply_text(
-                HMM,                        
-                reply_markup=InlineKeyboardMarkup(buttons),
+             reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
                 disable_web_page_preview=False,
@@ -226,8 +223,8 @@ def start(update: Update, context: CallbackContext):
             .format(escape_markdown(first_name), escape_markdown(chat_name), uptime), reply_markup=InlineKeyboardMarkup(
                 [
                  [
-                    InlineKeyboardButton(text="🚨Support Grp", url=f"https://t.me/{SUPPORT_CHAT}"),
-                    InlineKeyboardButton(text="❗Updates", url=f"https://t.me/{UPDATE_CHANNEL}")
+                    InlineKeyboardButton(text="🚨Support Grp", url=f"https://t.me/narutobot_0001"),
+                    InlineKeyboardButton(text="❗Updates", url=f"https://t.me/Shayariki_mehfil")
                  ]
                 ]
             ),
@@ -359,37 +356,31 @@ def Shikimori_about_callback(update, context):
     query = update.callback_query
     if query.data == "Shikimori_":
         query.message.edit_text(
-            text=f"๏ I'm *{bot_name}*, a powerful group management bot built to help you manage your group easily."
+            text=f"๏ I'm *Naruto*, a powerful group management bot built to help you manage your group easily Made by @Niku0001."
             "\n• I can restrict users."
             "\n• I can greet users with customizable welcome messages and even set a group's rules."
             "\n• I have an advanced anti-flood system."
             "\n• I can warn users until they reach max warns, with each predefined actions such as ban, mute, kick, etc."
             "\n• I have a note keeping system, blacklists, and even predetermined replies on certain keywords."
             "\n• I check for admins' permissions before executing any command and more stuffs"
-            f"\n\n_{bot_name}'s licensed under the GNU General Public License v3.0_"
-            f"\n\n Orginal Repositiory created by [SOME1HING](https://github.com/SOME-1HING) on [github](https://github.com/SOME-1HING/ShikimoriBot) for [Shikimori Bot](https://t.me/micchon_shikimori_bot)"
-            f"\n\n Click on buttons bellow to either check out the original repository or to go back.",
+            f"\n\n_Shikimori's licensed under the GNU General Public License v3.0_"
+            f"\n\n Click on buttons bellow to get basic help for ShikimoriBot.",
             parse_mode=ParseMode.MARKDOWN,
             disable_web_page_preview=True,
             reply_markup=InlineKeyboardMarkup(
                 [
-                    [
-                    InlineKeyboardButton(text="Repo", url="https://github.com/SOME-1HING/ShikimoriBot"),
-                    ],
-                    [
+                 [           
                     InlineKeyboardButton(text="Back", callback_data="Shikimori_back"),
-                    ],
-                ]
-            ),
+                 ]
+               ]
+            ), 
         )
     elif query.data == "Shikimori_back":
         first_name = update.effective_user.first_name
         uptime = get_readable_time((time.time() - StartTime))
-        hmm = "Hello *{}*! Nice to meet you!".format(escape_markdown(first_name))
-        HMM = hmm + PM_START_TEXT
-     
-        query.message.edit_text(
-                HMM,
+        query. message.edit_text(
+                PM_START_TEXT.format(
+                    escape_markdown (first_name)), 
                 reply_markup=InlineKeyboardMarkup(buttons),
                 parse_mode=ParseMode.MARKDOWN,
                 timeout=60,
@@ -658,14 +649,19 @@ def donate(update: Update, context: CallbackContext):
     bot = context.bot
     if chat.type == "private":
         update.effective_message.reply_text(
-            "https://www.paypal.me/PaulSonOfLars", parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
+            DONATE_STRING, parse_mode=ParseMode.MARKDOWN, disable_web_page_preview=True
         )
-
+        if OWNER_ID != 1606221784:
+        update.effective_message.reply_text(
+             "I'm free for everyone ❤️ If you wanna make me smile, just join"
+             "[My Channel]({})".format(DONATION_LINK),
+              parse_mode=ParseMode.MARKDOWN,
+            ) 
     else:
         try:
             bot.send_message(
                 user.id,
-                "https://www.paypal.me/PaulSonOfLars",
+                DONATE_STRING,
                 parse_mode=ParseMode.MARKDOWN,
                 disable_web_page_preview=True,
             )
