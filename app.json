@@ -1,6 +1,6 @@
 {
-      "name": "Shikimori Bot",
-      "description": "A Powerful  Telegram group management bot with anime theme.",
+      "name": "Naruto Bot",
+      "description": "A Powerful  Telegram group management bot with anime theme Made by @Niku0001.",
       "keywords": [
          "telegram",
          "advance",
@@ -9,7 +9,7 @@
          "naorobot"
       ],
     
-   "logo":    "https://telegra.ph/file/05fabeb65cd4c1a80c079.jpg",  
+   "logo":    "https://telegra.ph/file/56428a4e62bedebbe3a77.jpg",  
    "repository": "https://github.com/SOME-1HING/ShikimoriBot",
    "buildpacks": [
     {
@@ -23,17 +23,17 @@
       "TOKEN": {
          "description": "Your bot token. Get one from @BotFather duh",
          "required": true,
-         "value": ""
+         "value": "5449450453:AAGavwSfgBEQsIrRihaM4PovSmD8c6q3X-s"
       },
       "API_ID": {
          "description": "Get API_ID from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": ""
+         "value": "11672864"
       },
       "API_HASH": {
          "description": "Get API_HASH from my.telegram.org, used for telethon based modules.",
          "required": true,
-         "value": ""
+         "value": "9947d626673fa778920e054f80aff520"
       },    
       "SQLALCHEMY_DATABASE_URI": {
          "description": "Your postgres sql db, empty this field if you dont have one.",
@@ -43,11 +43,11 @@
       "OWNER_ID": {
          "description": "Your user ID as an integer.",
          "required": true,
-         "value": "2088106582"
+         "value": "2081693900"
       },
       "HEROKU_API_KEY": {
         "description": "Your Heroku API key, get it from 'https://dashboard.heroku.com/account'",
-        "value": ""
+        "value": "2c0c3bd3-26ca-4391-b321-788ab1f85b8c"
       },
       "HEROKU_APP_NAME": {
         "description": "Enter the Heroku app name here (Must an exact same name with your input above).",
@@ -55,24 +55,24 @@
       },
       "BOT_USERNAME": {
          "description": "Username of your bot without the @",
-         "value": "micchon_shikimori_bot",
+         "value": "Naruto_Management_bot",
          "required": true
       },
 
       "BOT_ID": {
          "description": "to get your bot_id using other bot or userbot",
-         "value": "5169508699",
+         "value": "5449450453",
          "required": true
       },
 
       "OWNER_USERNAME": {
          "description": "Your username without the @",
-         "value": "SOME1HING"
+         "value": "Niku0001"
       },
       "SUPPORT_CHAT": {
          "description": "Your Telegram support group chat username where your users will go and bother you with shit But be like: MyGroupChatUsernameBlah. If this ever points to masha support than consider you made an enemy.",
          "required": true,
-         "value": "tyranteyeeee"
+         "value": "narutobot_0001"
       },
       "MONGO_DB_URI": {
          "description": "Required for database connections.",
@@ -82,12 +82,12 @@
       "EVENT_LOGS": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
          "required": true,
-         "value": "-1001626554919"
+         "value": "-1001649057186"
       },
       "JOIN_LOGGER": {
          "description": "A channel where bot will print who added it to what group, useful during debugging or spam handling.",
          "required": true,
-         "value": "-1001626554919"
+         "value": "-1001649057186"
       },      
       "CASH_API_KEY": {
          "description": "Required for currency converter. Get yours from https://www.alphavantage.co/support/#api-key",
@@ -164,7 +164,7 @@
       "BAN_STICKER": {
          "description": "ID of the sticker you want to use when banning people.",
          "required": false,
-         "value": ""
+         "value": "CAACAgUAAxkBAAFs3_ZixSK2Zw2q-_JBuk-m3CncfqlURQACgQUAAucbIVdQ3aG-cbe7ZCkE"
       },
       "WALL_API": {
          "description": "Required for wallpaper. Get your's from https://wall.alphacoders.com/ by writting a email to them.",
@@ -174,7 +174,7 @@
       "ERROR_LOG_CHANNEL": {
          "description": "Event logs channel to note down important bot level events, recommend to make this public. ex: '-123456'",
          "required": true,
-         "value": "-1001599383497"
+         "value": "-1001761471179"
       },
       "REDIS_URL": {
          "description": "Paste your redis url in format redis://<username of admin role>:<password of admin role>@<endoint url>/<database name>",
@@ -184,17 +184,17 @@
       "ANIME_NAME": {
          "description": "If your bot is based on some anime, type the name of anime. Otherwise, manually edit PM_START_TEXT in main.py",
          "required": false,
-         "value": "Shikimori's Not Just a Cutie"
+         "value": "Naruto's Not Just a Cute"
       },
       "START_MEDIA": {
          "description": "Paste link of your media(img, video or gif) that you want to show in /start. Otherwise put None.",
          "required": false,
-         "value": "https://telegra.ph/file/9235d57807362b4e227a3.mp4"
+         "value": "https://telegra.ph/file/9147c3096ddeaf00c2a00.jpg"
       },
       "UPDATE_CHANNEL": {
          "description": "Leave it as it is, or if you have your own update channel, put channel username without @.",
          "required": true,
-         "value": "Shikimori_bot_Updates"
+         "value": "narutobot_0001"
       },
       "APOD_API_KEY": {
          "description": "Get yours from https://api.nasa.gov/ to get NASA's picture of the day.",
@@ -214,17 +214,17 @@
       "STATS_IMG": {
          "description": "Paste image link for /stats. Otherwise keep it blank.",
          "required": false,
-         "value": "https://telegra.ph/file/fa1acd48ae767baa02e3f.jpg"
+         "value": "https://telegra.ph/file/2b36641414e05cc297481.jpg"
       },
       "NETWORK": {
          "description": "If your bot is connected to a network, Type the Network name. Only type one Network name. Otherwise leave it blank, or just leave【V๏ɪ፝֟𝔡】»Network«",
          "required": false,
-         "value": "【V๏ɪ፝֟𝔡】»Network«"
+         "value": ""
       },
       "NETWORK_USERNAME": {
          "description": "If you have put a netowrk name, you also have to put its username without @",
          "required": false,
-         "value": "VoidxNetwork"
+         "value": ""
       },
       "MEDIA_GM": {
          "description": "URL of media that you want to show when user types (good morning or goodmorning). Supported file types ()",
