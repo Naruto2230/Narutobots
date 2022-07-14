@@ -1,5 +1,5 @@
 {
-      "name": "Shikimori Bot",
+      "name": "Naruto Bot",
       "description": "A Powerful  Telegram group management bot with anime theme.",
       "keywords": [
          "telegram",
@@ -10,7 +10,6 @@
       ],
     
    "logo":    "https://telegra.ph/file/05fabeb65cd4c1a80c079.jpg",  
-   "repository": "https://github.com/SOME-1HING/ShikimoriBot",
    "buildpacks": [
     {
       "url": "https://github.com/heroku/heroku-buildpack-python"
@@ -219,12 +218,12 @@
       "NETWORK": {
          "description": "If your bot is connected to a network, Type the Network name. Only type one Network name. Otherwise leave it blank, or just leave【V๏ɪ፝֟𝔡】»Network«",
          "required": false,
-         "value": "【V๏ɪ፝֟𝔡】»Network«"
+         "value": ""
       },
       "NETWORK_USERNAME": {
          "description": "If you have put a netowrk name, you also have to put its username without @",
          "required": false,
-         "value": "VoidxNetwork"
+         "value": ""
       },
       "MEDIA_GM": {
          "description": "URL of media that you want to show when user types (good morning or goodmorning). Supported file types (jpg, png, gif, webp, mkv, mp4). If you don't want this, just type reply_to_user_chat inside NO_LOAD vars. TBH it is a shit feature.",
